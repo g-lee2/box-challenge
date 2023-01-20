@@ -1,5 +1,6 @@
 import React from "react";
 import boxes from "./boxes";
+import Box from "./components/Box";
 import './App.css';
 
 export default function App() {
@@ -7,7 +8,7 @@ export default function App() {
     
     const boxElements = boxesData.map(box => {
         return (
-            <p key={box.id} className="boxes"></p>
+            <Box on={box.on} key={box.id}  />
         )
     });
 
