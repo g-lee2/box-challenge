@@ -1,17 +1,16 @@
 import React from "react";
 
 export default function Box(props) {
-  const [boxColor, setBoxColor] = React.useState(props.on);
     
   const styles = {
-      backgroundColor: boxColor ? "#222222" : "transparent"
-  }
-  
-  function handleClick() {
-      setBoxColor(prevBoxColor => !prevBoxColor)
+      backgroundColor: props.on ? "#222222" : "transparent"
   }
   
     return (
-        <div className="boxes" style={styles} onClick={handleClick}></div>
+        <div 
+          className="boxes" 
+          style={styles} 
+          onClick={() => props.handleClick(props.id)}>
+        </div>
     )
 }
