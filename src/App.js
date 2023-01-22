@@ -14,6 +14,19 @@ export default function App() {
       })
     }
     
+    // Without arrow functions
+    // function handleClick(id) {
+    //   setBoxesData(function(prevBoxes) {
+    //       return prevBoxes.map(function(box) {
+    //           if (box.id === id) {
+    //               return Object.assign({}, box, { on: !box.on });
+    //           } else {
+    //               return box;
+    //           }
+    //       });
+    //   });
+    // } 
+    
     const boxElements = boxesData.map(box => {
         return (
             <Box 
